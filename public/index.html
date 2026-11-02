@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Veterinaria Patitas Felices</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Veterinaria Patitas Felices</h1>
+
+    <p>Bienvenidos a nuestra veterinaria. Si no te encuentras registrado aun, coloca los datos de ti y tu mascota </p>
+
+    <h2>Registro</h2>
+
+    <form action="/guardar-mascota" method="POST">
+
+        <label>Nombre de la mascota:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Tipo de animal:</label>
+        <select name="tipo" required>
+            <option value="">Seleccione</option>
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
+            <option value="Otro">Otro</option>
+        </select>
+
+        <label>Raza:</label>
+        <input type="text" name="raza" required>
+
+        <label>Edad:</label>
+        <input type="number" name="edad" min="0" required>
+
+        <label>Nombre del dueño:</label>
+        <input type="text" name="dueno" required>
+
+        <button type="submit">Guardar mascota</button>
+
+    </form>
+
+    <h2>Solicitud de Atención Veterinaria</h2>
+
+    <form action="/guardar-atencion" method="POST">
+
+        <label>Nombre del dueño:</label>
+        <input type="text" name="dueno" required>
+
+        <label>Nombre de la mascota:</label>
+        <input type="text" name="mascota" required>
+
+        <label>Fecha de atención:</label>
+        <input type="date" name="fecha" required>
+
+        <label>Motivo de consulta:</label>
+        <input type="text" name="motivo" required>
+
+        <label>Teléfono:</label>
+        <input type="tel" name="telefono" required>
+
+        <button type="submit">Solicitar atención</button>
+
+    </form>
+
+</body>
+</html>
